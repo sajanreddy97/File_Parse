@@ -1,8 +1,5 @@
 package com.sajan;
 
-import static com.sajan.HelperFunctions.checkForWord;
-import static com.sajan.HelperFunctions.getSortedWordsList;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -42,7 +39,7 @@ public class FileOperations {
     public static void getTopTenWords(StringBuilder fileData) {
     	
     	if (fileData != null) {
-	        LinkedList<Map.Entry<String,Integer>> list = getSortedWordsList(fileData);
+	        LinkedList<Map.Entry<String,Integer>> list = HelperFunctions.getSortedWordsList(fileData);
 	
 	        System.out.println("\n===== TOP 10 MOST USED WORDS IN FILE =====");
 	
@@ -60,12 +57,12 @@ public class FileOperations {
     	
     	if (fileData != null) {
 
-	        LinkedList<Map.Entry<String, Integer>> list = getSortedWordsList(fileData);
+	        LinkedList<Map.Entry<String, Integer>> list = HelperFunctions.getSortedWordsList(fileData);
 	        Map.Entry<String, Integer> maxEntry = list.get(0);
 	        String[] splitByPeriods = fileData.toString().split("(?<=[a-z])\\.\\s+");
 	
 	        for(int i=splitByPeriods.length - 1; i>0; i--) {
-	            if (checkForWord(maxEntry.getKey(), splitByPeriods[i].toLowerCase())) {
+	            if (HelperFunctions.checkForWord(maxEntry.getKey(), splitByPeriods[i].toLowerCase())) {
 	                if(i == splitByPeriods.length - 1) {
 	                    System.out.println("\nLAST SENTENCE WITH MOST USED WORD -> " + splitByPeriods[i]);
 	                    return;

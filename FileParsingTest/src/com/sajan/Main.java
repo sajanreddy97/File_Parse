@@ -1,16 +1,12 @@
 package com.sajan;
-import static com.sajan.FileOperations.getLastSentenceWithMostUsedWord;
-import static com.sajan.FileOperations.getTopTenWords;
-import static com.sajan.FileOperations.getTotalWords;
-import static com.sajan.FileOperations.readFileData;
 
 public class Main {
 
     public static void main(String[] args) {
-        StringBuilder fileData = readFileData("passage.txt");
-        getTotalWords(fileData);
-        getTopTenWords(fileData);
-        getLastSentenceWithMostUsedWord(fileData);
+        StringBuilder fileData = FileOperations.readFileData("passage.txt");
+        FileOperations.getTotalWords(fileData);
+        FileOperations.getTopTenWords(fileData);
+        FileOperations.getLastSentenceWithMostUsedWord(fileData);
     }
 
 }
