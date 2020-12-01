@@ -1,5 +1,6 @@
 package com.sajan;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -14,7 +15,7 @@ public class FileOperations {
         try {
             String fileData;
             FileReader fileReader = new FileReader(fileName);
-            Scanner scanner = new Scanner(fileReader);
+            Scanner scanner = new Scanner(new BufferedReader(fileReader));
 
             while (scanner.hasNextLine()) {
                 fileData = scanner.nextLine();
