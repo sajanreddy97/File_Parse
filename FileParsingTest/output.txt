@@ -1,0 +1,15 @@
+TOTAL WORDS IN FILE -> 443
+
+===== TOP 10 MOST USED WORDS IN FILE =====
+Word 1 -> the=18
+Word 2 -> a=16
+Word 3 -> is=15
+Word 4 -> auctions=14
+Word 5 -> for=13
+Word 6 -> of=13
+Word 7 -> in=12
+Word 8 -> object=11
+Word 9 -> to=10
+Word 10 -> price=9
+
+LAST SENTENCE WITH MOST USED WORD -> Closed formats are opague: only the seller is able to tell how much each customer is willing to pay for an object.
